@@ -89,6 +89,19 @@
         }
 
         window.addEventListener('resize', drawCharts);
+
+        function calculateMana() {
+            var temps = 50;
+            var connaissance = 20;
+            var argent = 30;
+
+            var mana = temps * connaissance * argent;
+            document.getElementById('mana-value').textContent = 'Mana: ' + mana;
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            calculateMana();
+        });
     </script>
     <style>
         body {
@@ -168,19 +181,23 @@
         .explicatif span {
             color: #FFD700;
         }
+        .compteur-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
         #CompteurMonnaie {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
             background-color: #1E1E1E;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             width: 150px;
             color: #E0E0E0;
+            text-align: center;
+            margin-bottom: 20px;
         }
         #compteur-vie-mana {
-            margin: 20px auto;
             background-color: #1E1E1E;
             padding: 10px;
             border-radius: 10px;
@@ -246,20 +263,23 @@
             POUR EN OBTENIR UNE, <span>TU DOIS UTILISER LES DEUX AUTRES</span>
         </div>
     </section>
-    <section id="CompteurMonnaie">
-        <i class="fas fa-clock"></i> Temps: 50<br>
-        <i class="fas fa-book"></i> Connaissance: 20<br>
-        <i class="fas fa-dollar-sign"></i> Argent: 30
-    </section>
-    <section id="compteur-vie-mana">
-        <div class="barre">
-            <i class="fas fa-heart icone-barre" style="color: red;"></i>
-            <div class="barre-vie" style="width: 80%;"><span class="barre-text">80%</span></div>
+    <section class="compteur-section">
+        <div id="CompteurMonnaie">
+            <i class="fas fa-clock"></i> Temps: 50<br>
+            <i class="fas fa-book"></i> Connaissance: 20<br>
+            <i class="fas fa-dollar-sign"></i> Argent: 30
         </div>
-        <div class="barre">
-            <i class="fas fa-bolt icone-barre" style="color: yellow;"></i>
-            <div class="barre-mana" style="width: 60%;"><span class="barre-text">60%</span></div>
+        <div id="compteur-vie-mana">
+            <div class="barre">
+                <i class="fas fa-heart icone-barre" style="color: red;"></i>
+                <div class="barre-vie" style="width: 80%;"><span class="barre-text">80%</span></div>
+            </div>
+            <div class="barre">
+                <i class="fas fa-bolt icone-barre" style="color: yellow;"></i>
+                <div class="barre-mana" style="width: 60%;"><span class="barre-text">60%</span></div>
+            </div>
         </div>
+        <div id="mana-value" style="margin-top: 20px; font-size: 1.5em; color: #4d79ff;"></div>
     </section>
 </body>
 </html>
