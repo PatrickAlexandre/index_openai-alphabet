@@ -222,34 +222,36 @@
     </style>
 </head>
 <body>
-    <h1>NOUS AVONS TOUS</h1>
-    <div class="sub-title">3 MONNAIES</div>
-    <div class="dashboard-container">
-        <div class="zone" id="zone-temps">
-            <i class="fas fa-clock"></i>
-            <h2>LE TEMPS</h2>
-            <div id="temps-chart" class="chart-container"></div>
+    <section>
+        <h1>NOUS AVONS TOUS</h1>
+        <div class="sub-title">3 MONNAIES</div>
+        <div class="dashboard-container">
+            <div class="zone" id="zone-temps">
+                <i class="fas fa-clock"></i>
+                <h2>LE TEMPS</h2>
+                <div id="temps-chart" class="chart-container"></div>
+            </div>
+            <div class="zone" id="zone-connaissance">
+                <i class="fas fa-brain"></i>
+                <h2>LA CONNAISSANCE</h2>
+                <div id="connaissance-chart" class="chart-container"></div>
+            </div>
+            <div class="zone" id="zone-argent">
+                <i class="fas fa-dollar-sign"></i>
+                <h2>L'ARGENT</h2>
+                <div id="argent-chart" class="chart-container"></div>
+            </div>
         </div>
-        <div class="zone" id="zone-connaissance">
-            <i class="fas fa-brain"></i>
-            <h2>LA CONNAISSANCE</h2>
-            <div id="connaissance-chart" class="chart-container"></div>
+        <div class="explicatif">
+            POUR EN OBTENIR UNE, <span>TU DOIS UTILISER LES DEUX AUTRES</span>
         </div>
-        <div class="zone" id="zone-argent">
-            <i class="fas fa-dollar-sign"></i>
-            <h2>L'ARGENT</h2>
-            <div id="argent-chart" class="chart-container"></div>
-        </div>
-    </div>
-    <div class="explicatif">
-        POUR EN OBTENIR UNE, <span>TU DOIS UTILISER LES DEUX AUTRES</span>
-    </div>
-    <div id="CompteurMonnaie">
+    </section>
+    <section id="CompteurMonnaie">
         <i class="fas fa-clock"></i> Temps: 50<br>
         <i class="fas fa-book"></i> Connaissance: 20<br>
         <i class="fas fa-dollar-sign"></i> Argent: 30
-    </div>
-    <div id="compteur-vie-mana">
+    </section>
+    <section id="compteur-vie-mana">
         <div class="barre">
             <i class="fas fa-heart icone-barre" style="color: red;"></i>
             <div class="barre-vie" style="width: 80%;"><span class="barre-text">80%</span></div>
@@ -258,6 +260,6 @@
             <i class="fas fa-bolt icone-barre" style="color: yellow;"></i>
             <div class="barre-mana" style="width: 60%;"><span class="barre-text">60%</span></div>
         </div>
-    </div>
+    </section>
 </body>
 </html>
