@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouvel onglet</title>
+    <script src="https://kit.fontawesome.com/be85c9a798.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./JS/display_pop-up.js" defer></script>
+</head>
+<body class="bg-cover bg-center h-screen" style="background-image:url('/mnt/data/Capture.PNG');">
+    <!-- 🌐 Barre de navigation -->
+    <div class="flex justify-between items-center p-4 text-gray-800 bg-white/80 backdrop-blur-lg shadow">
+        <div class="flex space-x-4 items-center">
+            <a href="#" onclick="window.location.href = './PAT/index.html';" class="flex items-center text-gray-700 hover:text-gray-900">
+                <i class="fas fa-th mr-2"></i><span class="font-semibold">Applications</span>
+            </a>
+            <div class="h-6 border-l border-gray-300"></div>
+            <a href="#" class="flex items-center text-gray-700 hover:text-gray-900">
+                <i class="fa-regular fa-folder mr-2"></i><span class="font-semibold">Favoris</span>
+            </a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="#" class="font-semibold text-gray-700 hover:text-gray-900">Mail</a>
+            <a href="#" class="font-semibold text-gray-700 hover:text-gray-900">Images</a>
+            <i id="applications-icon" class="fas fa-th text-gray-700 hover:text-gray-900" title="Applications"></i>
+            <img src="https://placehold.co/30x30" alt="User avatar" class="rounded-full border border-gray-300">
+        </div>
+    </div>
+    <!-- 🎨 Contenu principal avec logo et barre de recherche -->
+    <div class="flex flex-col items-center mt-20">
+        <!-- Logo -->
+        <div class="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-green-500 to-cyan-500">𐌱𐌹𐌱𝔩𝔢𐍉𝔗𝔢𝔠𝔥</div>
+        <!-- 📝 Barre de recherche -->
+        <div class="mt-8 w-full px-4 flex justify-center">
+            <div class="bg-white rounded-full shadow-lg flex items-center px-4 py-2 w-full max-w-2xl">
+                <i class="fas fa-paperclip text-gray-500"></i>
+                <input type="text" placeholder="Envoyez un message ou effectuez une recherche" class="ml-4 outline-none w-full text-gray-600">
+                <button class="ml-4 rounded-full p-2 bg-gray-100 hover:bg-gray-200"><i class="fas fa-arrow-up text-gray-400"></i></button>
+            </div>
+        </div>
+        <!-- 📱 Icônes des includes avec leurs noms -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-center mt-8 text-gray-800">
+            <div class="flex flex-col items-center hover:text-gray-900">
+                <i class="fas fa-briefcase text-4xl bg-gray-100 rounded-full p-3 text-orange-400"></i>
+                <span class="text-sm mt-2">Productivité</span>
+            </div>
+            <div class="flex flex-col items-center hover:text-gray-900">
+                <i class="fas fa-newspaper text-4xl bg-gray-100 rounded-full p-3 text-purple-400"></i>
+                <span class="text-sm mt-2">Actualités</span>
+            </div>
+            <a href="./includes/views/3-MONNAIES.html" class="flex flex-col items-center hover:text-gray-900">
+                <i class="fas fa-chart-simple text-4xl bg-gray-100 rounded-full p-3 text-green-400"></i>
+                <span class="text-sm mt-2">Graphique</span>
+            </a>
+            <a href="./includes/views/3-MONNAIES.html" class="flex flex-col items-center hover:text-gray-900">
+                <i class="fas fa-coins text-4xl bg-gray-100 rounded-full p-3 text-pink-400"></i>
+                <span class="text-sm mt-2">MonnaieGraph</span>
+            </a>
+            <div class="flex flex-col items-center hover:text-gray-900">
+                <i class="fas fa-comments text-4xl bg-gray-100 rounded-full p-3 text-blue-400"></i>
+                <span class="text-sm mt-2">ChatGPT</span>
+            </div>
+            <div class="flex flex-col items-center hover:text-gray-900">
+                <i class="fab fa-youtube text-4xl bg-gray-100 rounded-full p-3 text-red-500"></i>
+                <span class="text-sm mt-2">Vidéos</span>
+            </div>
+            <div class="flex flex-col items-center hover:text-gray-900">
+                <i class="fas fa-address-book text-4xl bg-gray-100 rounded-full p-3 text-yellow-400"></i>
+                <span class="text-sm mt-2">Contacts</span>
+            </div>
+            <div class="flex flex-col items-center hover:text-gray-900">
+                <i class="fas fa-rocket text-4xl bg-gray-100 rounded-full p-3 text-indigo-400"></i>
+                <span class="text-sm mt-2">Nous rejoindre</span>
+            </div>
+        </div>
+    </div>
+    <!-- ✏️ Bouton flottant pour ajouter un nouvel élément -->
+    <button class="fixed bottom-4 right-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-full shadow-lg hover:bg-gray-300"><i class="fas fa-pencil-alt"></i></button>
+</body>
+</html>
